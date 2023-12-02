@@ -2,7 +2,7 @@ import 'fs';
 import * as fs from 'fs';
 import {marked} from 'marked';
 const CHUNK = 10;
-const BASE_PATH = './src/posts';
+const BASE_PATH = './posts';
 export const generateManifest = () => {
   return {
     name: 'generate-manifest',
