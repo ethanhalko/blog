@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-import Post from './Post';
+import Post from './components/Post/Post.tsx';
+import LayoutMain from './layouts/LayoutMain.tsx';
 function App() {
   const [pagePosts, setPagePosts] = useState<Record<string, string>[]>([]);
   const pageNumber = 1;
@@ -16,9 +16,11 @@ function App() {
   const posts = pagePosts.map((post) => Post(post));
 
   return (
-    <div className="min-h-screen h-full bg-neutral-50">
-      { posts }
-    </div>
+    <LayoutMain>
+      <div className="flex flex-col mx-auto">
+        { posts }
+      </div>
+    </LayoutMain>
   )
 }
 

@@ -2,7 +2,15 @@ import 'fs';
 import * as fs from 'fs';
 import {marked} from 'marked';
 
-type Blog = Record<string, string | Date>[][];
+interface Post {
+  title: string,
+  content: string,
+  created_at: Date,
+  updated_at: Date
+}
+
+type Page = Post[];
+type Blog = Page[];
 
 const CHUNK = 10;
 const BASE_PATH = './posts';
@@ -14,6 +22,8 @@ function getTitle(file: string) {
 
 function writePages(pages: Blog) {
   pages.forEach((page, index) => {
+    page.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
+
     fs.promises.writeFile(`./src/pages/${index + 1}.json`, JSON.stringify(page));
   });
 
