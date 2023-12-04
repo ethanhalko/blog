@@ -9,7 +9,7 @@ export default function Post(postData: Record<string, string>) {
     <div key={postData.created_at} className={'my-8'}>
       <section>
         <h1 className="text-center text-3xl">{postData.title}</h1>
-        <h5 className={'text-xs italic font-extralight text-center mt-4 mb-2'}>Published: { publishedDate }</h5>
+        <h2 className={'text-xs italic font-extralight text-center mt-4 mb-2'}>Published: { publishedDate }</h2>
         { <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(postData.content) }} /> }
       </section>
       <hr className="border-t-2 py-2"/>

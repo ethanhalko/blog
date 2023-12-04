@@ -10,17 +10,17 @@ export default function LayoutMain<T extends ReactNode | ReactNode[]>({children}
           <ul className={'flex mx-auto space-x-4 my-4'}>
             <li><div className={'i-akar-icons:home-alt1 text-2xl'} /></li>
             <li>
-              <a href={'https://github.com/ethanhalko'} target={'_blank'}>
+              <a href={'https://github.com/ethanhalko'} target={'_blank'} aria-label={'See my Github profile'}>
                 <div className={'i-akar-icons:github-outline-fill text-2xl'} />
               </a>
             </li>
             <li>
-              <a href={'https://www.linkedin.com/in/ethan-halko-1053a4102/'} target={'_blank'}>
+              <a href={'https://www.linkedin.com/in/ethan-halko-1053a4102/'} target={'_blank'} aria-label={'See my LinkedIn profile'}>
                 <div className={'i-akar-icons:linkedin-box-fill text-2xl'} />
               </a>
             </li>
             <li>
-              <a href={'https://www.thingiverse.com/erthan/designs'} target={'_blank'}>
+              <a href={'https://www.thingiverse.com/erthan/designs'} target={'_blank'} aria-label={'See my Thingiverse profile'}>
                 <div className={'i-simple-icons:thingiverse text-2xl'} />
               </a>
             </li>
