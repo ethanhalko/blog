@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "engines": {
-    "node": "~20.x.x"
+    "node": "~18.x"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
