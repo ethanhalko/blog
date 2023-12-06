@@ -20,7 +20,7 @@ export const renderer = {
 
     return attrs.length ? `<p class="${attrs.join(' ')}">${text}</p>` : `<p>${text}</p>`;
   },
-  link(href: string, title: string, text: string) {
+  link(href: string, title: string | null | undefined, text: string) {
     return `<a target="_blank" href="${href}" title="${title}">${text}</a>`
   }
 }
