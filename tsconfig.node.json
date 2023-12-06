@@ -8,6 +8,6 @@
   },
   "include": [
     "vite.config.ts",
-    "./src/scripts/generate-contents.ts"
+    "./src/scripts/*/**.ts",
   ]
 }
