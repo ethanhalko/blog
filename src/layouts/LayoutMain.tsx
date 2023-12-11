@@ -4,24 +4,24 @@ export default function LayoutMain<T extends ReactNode | ReactNode[]>({children}
   return(
     <>
       <div className="min-h-screen h-full w-full bg-neutral-50 px-8 py-16">
-        <div className={'site-header mx-auto mb-8 flex flex-col'}>
+        <div className={'site-header mx-auto flex flex-col'}>
           <h1 className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mx-auto'}>What I'm Doing Right Now</h1>
           <sub className={'mx-auto my-6 italic font-light'}>By Ethan Halko</sub>
           <ul className={'flex mx-auto space-x-4 my-4'}>
-            <li><div className={'i-akar-icons:home-alt1 text-2xl'} /></li>
+            <li><div className={'i-akar-icons:home-alt1 text-5xl'} /></li>
             <li>
-              <a href={'https://github.com/ethanhalko'} target={'_blank'} aria-label={'See my Github profile'}>
-                <div className={'i-akar-icons:github-outline-fill text-2xl'} />
+              <a href={'https://github.com/ethanhalko'} target={'_blank'} title={'Github'} aria-label={'See my Github profile'}>
+                <div className={'i-akar-icons:github-outline-fill text-5xl'} />
               </a>
             </li>
             <li>
-              <a href={'https://www.linkedin.com/in/ethan-halko-1053a4102/'} target={'_blank'} aria-label={'See my LinkedIn profile'}>
-                <div className={'i-akar-icons:linkedin-box-fill text-2xl'} />
+              <a href={'https://www.linkedin.com/in/ethan-halko-1053a4102/'} title={'LinkedIn'} target={'_blank'} aria-label={'See my LinkedIn profile'}>
+                <div className={'i-akar-icons:linkedin-box-fill text-5xl'} />
               </a>
             </li>
             <li>
-              <a href={'https://www.thingiverse.com/erthan/designs'} target={'_blank'} aria-label={'See my Thingiverse profile'}>
-                <div className={'i-simple-icons:thingiverse text-2xl'} />
+              <a href={'https://www.thingiverse.com/erthan/designs'} title={'Thingiverse'} target={'_blank'} aria-label={'See my Thingiverse profile'}>
+                <div className={'i-simple-icons:thingiverse text-5xl'} />
               </a>
             </li>
           </ul>
@@ -35,4 +35,6 @@ export default function LayoutMain<T extends ReactNode | ReactNode[]>({children}
     </>
   )
 }
+
+
 

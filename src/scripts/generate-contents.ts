@@ -1,6 +1,7 @@
 import 'fs';
 import * as fs from 'fs';
 import {marked} from 'marked';
+import {parse} from 'date-fns';
 import {renderer, getTitle} from './helpers';
 import type {Post} from '../../types/blog';
 
@@ -22,15 +23,15 @@ function writePages(pages: Blog) {
   fs.promises.writeFile(`./src/pages/manifest.json`, JSON.stringify({page_count: pages.length}));
 }
 
-export const getPage = async (path: string) => {
+export const getPage = async (fileName: string) => {
+  const path = BASE_PATH + '/' + fileName;
   const file = await fs.promises.readFile(path, {encoding: 'utf8'});
-
-  const {birthtime, mtime} = await fs.promises.stat(path);
+  const {mtime} = await fs.promises.stat(path);
 
   return {
     title: getTitle(file),
     content: await marked.parse(file.slice(file.indexOf('\n'))),
-    created_at: birthtime,
+    created_at: parse(fileName.replace('.md', '').trim(), 'dd-MM-yy', new Date()),
     updated_at: mtime
   }
 }
@@ -44,9 +45,8 @@ export const generateContents = () => {
 
       try {
         for (let i = 0; i < dir.length; ++i) {
-          const path = BASE_PATH + '/' + dir[i];
 
-          pages[Math.floor(i / CHUNK)].push(await getPage(path));
+          pages[Math.floor(i / CHUNK)].push(await getPage(dir[i]));
         }
 
         writePages(pages);
