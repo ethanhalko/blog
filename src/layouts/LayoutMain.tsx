@@ -5,7 +5,7 @@ const links = [
   {content: 'Go Home', label: 'Home', icon: 'i-akar-icons:home-alt1', path: '/'},
   {content: 'About Me', label: 'About', icon: 'i-akar-icons:face-happy', path: '/about'},
   {content: 'Github', label: 'See my Github Profile', icon: 'i-akar-icons:github-outline-fill', path: 'https://github.com/ethanhalko', newTab: true},
-  {content: 'LinkedIn', label: 'See my LinkedIn Profile', icon: 'i-akar-icons:github-outline-fill', path: 'https://github.com/ethanhalko', newTab: true},
+  {content: 'LinkedIn', label: 'See my LinkedIn Profile', icon: 'i-akar-icons:linkedin-box-fill', path: 'https://github.com/ethanhalko', newTab: true},
   {content: 'Thingiverse', label: 'See my Thingiverse Profile', icon: 'i-simple-icons:thingiverse', path: 'https://www.thingiverse.com/erthan/designs', newTab: true},
 ]
 
