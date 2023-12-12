@@ -22,7 +22,8 @@
 
     "types": [
       "@types/node",
-      "@types/dompurify"
+      "@types/dompurify",
+      "@types/react-router-dom"
     ]
   },
   "include": ["src"],

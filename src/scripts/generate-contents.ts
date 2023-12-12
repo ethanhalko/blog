@@ -17,10 +17,10 @@ function writePages(pages: Blog) {
   pages.forEach((page, index) => {
     page.sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
 
-    fs.promises.writeFile(`./src/pages/${index + 1}.json`, JSON.stringify(page));
+    fs.promises.writeFile(`./src/blog-pages/${index + 1}.json`, JSON.stringify(page));
   });
 
-  fs.promises.writeFile(`./src/pages/manifest.json`, JSON.stringify({page_count: pages.length}));
+  fs.promises.writeFile(`./src/blog-pages/manifest.json`, JSON.stringify({page_count: pages.length}));
 }
 
 export const getPage = async (fileName: string) => {
