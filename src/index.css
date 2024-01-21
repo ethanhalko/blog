@@ -15,3 +15,7 @@
 #about-page p {
     @apply py-2;
 }
+
+.site-header {
+    transition: margin 500ms;
+}

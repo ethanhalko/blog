@@ -15,7 +15,7 @@ export const renderer = {
       if (!inlineTokens[attr]) continue;
 
       text = text.replace(fullMatch, '').trim();
-      attrs.push(inlineTokens[attr].replace('%', value));
+      attrs.push(inlineTokens[attr].replace('%', value || attr));
     }
 
     return attrs.length ? `<p class="${attrs.join(' ')}">${text}</p>` : `<p>${text}</p>`;

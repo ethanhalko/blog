@@ -9,6 +9,6 @@ export default {
     'text-align': 'text-%',
     'width': 'w-%',
     'align': '%-auto',
-    'font-size': 'text-%'
+    'font-size': 'text-%',
   }
 } as Config;
