@@ -13,6 +13,7 @@ export default async function handler(
   const mailgun = new Mailgun(formData);
   const mgClient = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY || ''});
   const {name, email, subject, text} = request.body;
+
   try {
     await mgClient.messages.create(process.env.MAILGUN_DOMAIN || '', {
       from: `"${name}" <${email}>`,

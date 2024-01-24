@@ -7,9 +7,7 @@ export default function Contact() {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
 
-    await axios.post('api/contact', {
-      body: contactForm
-    });
+    await axios.post('api/contact', contactForm);
   }
 
   function updateFormData(e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) {
