@@ -19,3 +19,19 @@
 .site-header {
     transition: margin 500ms;
 }
+
+form label {
+    @apply text-base mt-2 mb-1;
+}
+
+input {
+    @apply h-10;
+}
+
+textarea {
+    @apply py-2;
+}
+
+input, textarea {
+    @apply outline-1 border border-neutral-400 rounded-md text-base mb-2 px-2;
+}

@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 src/blog-pages/*.json
+.vercel
+
+.env
