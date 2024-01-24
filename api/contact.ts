@@ -15,7 +15,7 @@ export default async function handler(
   const {name, email, subject, text} = request.body;
   try {
     await mgClient.messages.create(process.env.MAILGUN_DOMAIN || '', {
-      from: `${name} <${email}>`,
+      from: `"${name}" <${email}>`,
       to: [process.env.CONTACT_ADDRESS || ''],
       subject,
       text,
