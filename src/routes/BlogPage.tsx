@@ -7,8 +7,8 @@ export default function BlogPage() {
   const [pagePosts, setPagePosts] = useState<Record<string, string>[]>([]);
 
   const client = createClient({
-    projectId: 'r63foj8o',
-    dataset: 'production',
+    projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+    dataset: import.meta.env.VITE_SANITY_DATASET,
     useCdn: true,
     apiVersion: '2024-03-11',
   });
