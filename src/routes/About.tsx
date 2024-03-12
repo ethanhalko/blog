@@ -2,9 +2,9 @@ import LayoutMain from '../layouts/LayoutMain.tsx';
 
 export default function About() {
   return (
-    <LayoutMain showContent={true}>
+    <LayoutMain>
       <div id="about-page" className={'mt-8 mx-auto text-center'}>
-        <h1 className={'text-3xl mb-8'}>About Me:</h1>
+        <h1 className={'text-3xl my-8'}>About Me:</h1>
 
         <p>My name is Ethan.</p>
 
