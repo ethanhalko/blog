@@ -2,10 +2,7 @@ import type {VercelRequest, VercelResponse} from '@vercel/node';
 import Mailgun from 'mailgun.js';
 import formData from 'form-data';
 
-export default async function handler(
-  request: VercelRequest,
-  response: VercelResponse,
-) {
+export default async function handler(request: VercelRequest, response: VercelResponse) {
   if (request.method !== 'POST') {
     return response.status(404).json('Not found');
   }

@@ -8,6 +8,7 @@ import Root from './routes/Root.tsx';
 import ErrorPage from './routes/ErrorPage.tsx';
 import About from './routes/About.tsx';
 import BlogPage from './routes/BlogPage.tsx';
+import ContactPage from './routes/Contact.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About/>
+      },
+      {
+        path: '/contact',
+        element: <ContactPage/>
       }
     ]
   },
@@ -32,6 +37,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <FluentProvider theme={webLightTheme}>
       <RouterProvider router={router}/>
-    </FluentProvider>,
-  </React.StrictMode>,
+    </FluentProvider>
+  </React.StrictMode>
 )
