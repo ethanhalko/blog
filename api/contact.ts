@@ -1,12 +1,8 @@
 import type {VercelRequest, VercelResponse} from '@vercel/node';
 import sgMail from '@sendgrid/mail';
 
-export default async function handler(request: VercelRequest, response: VercelResponse) {
+export async function POST(request: VercelRequest, response: VercelResponse) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
-
-  if (request.method !== 'POST') {
-    return response.status(404).json('Not found');
-  }
 
   const {name, email, subject, text} = request.body;
 
