@@ -1,18 +1,17 @@
 import type {VercelRequest, VercelResponse} from '@vercel/node';
-import Mailgun from 'mailgun.js';
-import formData from 'form-data';
+import sgMail from '@sendgrid/mail';
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
+
   if (request.method !== 'POST') {
     return response.status(404).json('Not found');
   }
 
-  const mailgun = new Mailgun(formData);
-  const mgClient = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY || ''});
   const {name, email, subject, text} = request.body;
 
   try {
-    await mgClient.messages.create(process.env.MAILGUN_DOMAIN || '', {
+    await sgMail.send({
       from: `"${name}" <${email}>`,
       to: [process.env.CONTACT_ADDRESS || ''],
       subject,

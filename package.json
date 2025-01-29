@@ -11,13 +11,14 @@
     "test": "vitest --run"
   },
   "engines": {
-    "node": "~18.x"
+    "node": "~20.x"
   },
   "dependencies": {
     "@fluentui/react-components": "^9.42.0",
     "@headlessui/react": "^1.7.18",
     "@portabletext/react": "^3.0.11",
     "@sanity/client": "^6.15.3",
+    "@sendgrid/mail": "^8.1.4",
     "@types/react-router-dom": "^5.3.3",
     "@vercel/node": "^3.0.17",
     "axios": "^1.6.5",

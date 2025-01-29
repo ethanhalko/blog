@@ -12,7 +12,6 @@ export default function Contact() {
 
   function updateFormData(e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setContactForm({...contactForm, [e.currentTarget.name]: e.currentTarget.value});
-    console.log(contactForm);
   }
 
   return (
